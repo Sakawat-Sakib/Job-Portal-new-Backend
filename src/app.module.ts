@@ -8,6 +8,7 @@ import { JobModule } from './job/job.module';
 import { ApplicationModule } from './application/application.module';
 import { PrismaModule } from './prisma.module';
 import { AuthModule } from './auth/auth.module';
+import { HealthController } from './health/health.controller';
 
 
 @Module({
@@ -20,7 +21,7 @@ import { AuthModule } from './auth/auth.module';
     JobModule, 
     ApplicationModule, 
     ],
-  controllers: [AppController],
+  controllers: [AppController, HealthController],
   providers: [AppService],
 
 })
